@@ -10,8 +10,8 @@
 </head>
 
 <body>
+  <!--Navbar-->
   <header class="navbar">
-
     <div class="navbar__brand">
       <img src="../static/images/logo.svg" alt="Microblog logo">
     </div>
@@ -28,6 +28,14 @@
   <main>
     <section>
       <h1>Add new entry</h1>
+      <!--Form-->
+      <form action="/entry" method="POST" class="form">
+        <p class="form__input">
+          <label for="entry" class="form__label">Entry</label>
+          <textarea name="entry" id="entry" class="form__textarea"></textarea>
+        </p>
+        <button type="submit" class="form__submit">Add entry</button>
+      </form>
     </section>
     <section>
       <h2>Recent posts</h2>
