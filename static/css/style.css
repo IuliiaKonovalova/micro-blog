@@ -16,4 +16,53 @@ p {
   padding: 0;
 }
 
-/*--Styling Body, Background--*/
+/*---- Styling Body ----*/
+body {
+  max-width: 50rem;
+  margin: 2em auto;
+}
+
+/*---- Styling Navbar ----*/
+.navbar {
+  max-width: 50rem;
+  margin: 2em auto;
+  background-color: aquamarine;
+  padding: 1.5em 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__title {
+  margin-left: 0.8em;
+  font-size: 1.3rem;
+  color: #5c6b70;
+}
+
+.navbar__navigation {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #5c6b70;
+}
+
+.navbar__navigation-item {
+  margin-left: 2em;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar__link:hover {
+  color: black;
+}
