@@ -18,13 +18,13 @@ p {
 
 /*---- Styling Body ----*/
 body {
-  max-width: 50rem;
-  margin: 2em auto;
+  font-family: Lato, sans-serif;
+  background-color: burlywood;
 }
 
 /*---- Styling Navbar ----*/
 .navbar {
-  max-width: 50rem;
+  max-width: 80rem;
   margin: 2em auto;
   background-color: aquamarine;
   padding: 1.5em 2.5em;
@@ -65,4 +65,57 @@ body {
 
 .navbar__link:hover {
   color: black;
+}
+
+/*---- Styling Main Content ----*/
+.main {
+  max-width: 70rem;
+  margin: 2em auto;
+  background-color: white;
+  padding: 1.5em;
+}
+
+.main__title {
+  margin: 1em 0;
+  font-size: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form__input {
+  width: 100%;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.form__textarea {
+  width: inherit;
+  font-size: 1.6rem;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  resize: vertical;
+}
+
+.form__submit {
+  background-color: #3cd0ff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+  border-radius: 0.9em;
+  border: none;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.form__submit:hover,
+.form__submit:focus {
+  background-color: #09a3d1;
 }
