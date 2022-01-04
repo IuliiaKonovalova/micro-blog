@@ -19,14 +19,16 @@ p {
 /*---- Styling Body ----*/
 body {
   font-family: Lato, sans-serif;
-  background-color: burlywood;
+  display: grid;
+  grid-template-rows: 1fr minmax(75vh, 9fr) 2fr;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
 /*---- Styling Navbar ----*/
 .navbar {
-  max-width: 80rem;
-  margin: 2em auto;
-  background-color: aquamarine;
+  grid-column: 1/4;
+  grid-row: 1/2;
+  background-color: rgba(98, 220, 250, 0.452);
   padding: 1.5em 2.5em;
   display: flex;
   flex-direction: row;
@@ -69,10 +71,10 @@ body {
 
 /*---- Styling Main Content ----*/
 .main {
-  max-width: 70rem;
-  margin: 2em auto;
+  grid-column: 2/3;
+  grid-row: 2/3;
   background-color: white;
-  padding: 1.5em;
+  padding: 5em;
 }
 
 .main__title {
@@ -80,6 +82,7 @@ body {
   font-size: 2rem;
 }
 
+/*---- Styling Form ----*/
 .form {
   display: flex;
   flex-direction: column;
@@ -120,6 +123,7 @@ body {
   background-color: #09a3d1;
 }
 
+/*---- Styling History ----*/
 .entry {
   margin-top: 3em;
 }
@@ -134,10 +138,15 @@ body {
   color: #5c6b70;
 }
 
+/*---- Styling Footer ----*/
 .footer {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  align-self: stretch;
+  justify-self: stretch;
   background-color: #323f43;
   padding: 4em 0;
-  margin-top: 5em;
+
   border-top: 4px solid black;
   color: white;
   font-size: 1.2rem;
