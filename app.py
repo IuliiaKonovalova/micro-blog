@@ -18,20 +18,8 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/main/")
+@app.route("/main")
 def main():
-    return render_template("main.html")
-
-
-@app.route("home", methods=["GET", "POST"])
-def home():
-    if request.method == "POST":
-        entry_content = request.form.get("content")
-        formatted_date = datetime.datetime.today().strftime("%Y-%m-%d")
-        mongo.db.entries.insert_one({"content": entry_content, "data": formatted_date})
-        return redirect(url_for('main'))
-
-
     entries_with_date = [
         (
             entry["content"],
@@ -40,7 +28,17 @@ def home():
         )
         for entry in mongo.db.entries.find({}).sort('data', -1)
     ]
-    return render_template("home.html", entries=entries_with_date)
+    return render_template("main.html", entries=entries_with_date)
+
+
+@app.route("/add_post", methods=["GET", "POST"])
+def add_post():
+    # if request.method == "POST":
+    #     entry_content = request.form.get("content")
+    #     formatted_date = datetime.datetime.today().strftime("%Y-%m-%d")
+    #     mongo.db.entries.insert_one({"content": entry_content, "data": formatted_date})
+    #     return redirect(url_for('main'))
+    return render_template("home.html")
 
 
 
