@@ -1,6 +1,7 @@
 import os
 import datetime
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
+from flask.helpers import url_for
 if os.path.exists("env.py"):
     import env
 
@@ -16,15 +17,20 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.route("/")
+@app.route("/main/")
+def main():
+    return render_template("main.html")
 
-@app.route("/", methods=["GET", "POST"])
+
+@app.route("home", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
         entry_content = request.form.get("content")
         formatted_date = datetime.datetime.today().strftime("%Y-%m-%d")
         mongo.db.entries.insert_one({"content": entry_content, "data": formatted_date})
-        entry_content = ""
-        formatted_date = ""
+        return redirect(url_for('main'))
+
 
     entries_with_date = [
         (
@@ -35,6 +41,9 @@ def home():
         for entry in mongo.db.entries.find({}).sort('data', -1)
     ]
     return render_template("home.html", entries=entries_with_date)
+
+
+
 
 
 if __name__ == "__main__":
