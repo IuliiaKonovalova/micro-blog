@@ -28,7 +28,7 @@ body {
 .navbar {
   grid-column: 1/4;
   grid-row: 1/2;
-  background-color: rgba(98, 220, 250, 0.452);
+  background-color: rgba(128, 255, 138, 0.452);
   padding: 1.5em 2.5em;
   display: flex;
   flex-direction: row;
