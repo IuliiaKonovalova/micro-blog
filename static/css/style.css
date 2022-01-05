@@ -28,7 +28,7 @@ body {
 .navbar {
   grid-column: 1/4;
   grid-row: 1/2;
-  background-color: rgba(128, 255, 138, 0.452);
+  background-color: #80ff8a73;
   padding: 1.5em 2.5em;
   display: flex;
   flex-direction: row;
@@ -111,7 +111,7 @@ body {
 }
 
 .form__submit {
-  background-color: #3cd0ff;
+  background-color: #2dcc28;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0.5em 1.5em;
@@ -124,7 +124,7 @@ body {
 
 .form__submit:hover,
 .form__submit:focus {
-  background-color: #09a3d1;
+  background-color: #06a700;
 }
 
 /*---- Styling History ----*/
