@@ -42,9 +42,9 @@
       <h2>Recent posts</h2>
       {% for entry in entries %}
       <article class="entry">
-        <div>
+        <div class="entry__header">
           <h3 class="entry__title">{{ entry[0] | truncate (30, true) }}</h3>
-          <time class="entry__date" datetime="03-01-2022">{{ entry[1] }}</time>
+          <time class="entry__date" datetime="{{ entry[1]}}">{{ entry[2] }}</time>
         </div>
         <p class="entry__content">
           {{ entry[0] }}
