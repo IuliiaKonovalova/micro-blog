@@ -23,6 +23,7 @@ def home():
         entry_content = request.form.get("content")
         formatted_date = datetime.datetime.today().strftime("%Y-%m-%d")
         entries.append((entry_content, formatted_date))
+        mongo.db.entries.insert_one({"content": entry_content, "data": formatted_date})
 
     entries_with_date = [
         (
