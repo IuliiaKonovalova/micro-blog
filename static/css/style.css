@@ -19,15 +19,16 @@ p {
 /*---- Styling Body ----*/
 body {
   font-family: Lato, sans-serif;
-  display: grid;
-  grid-template-rows: 6rem minmax(75vh, 9fr) 10rem;
-  grid-template-columns: 1fr 3fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /*---- Styling Navbar ----*/
 .navbar {
-  grid-column: 1/4;
-  grid-row: 1/2;
+  width: 100%;
   background-color: #80ff8a73;
   padding: 1.5em 2.5em;
   display: flex;
@@ -41,7 +42,6 @@ body {
 }
 
 .navbar__logo {
-  /* width: 10%; */
   height: 2.5rem;
   width: 2.5rem;
 }
@@ -75,18 +75,53 @@ body {
   color: black;
 }
 
+
+
 /*---- Styling Main Content ----*/
 .main {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  background-color: white;
+  width: 100%;
   padding: 5em;
+  max-width: 90rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main__title {
   margin: 1em 0;
   font-size: 2rem;
 }
+
+.add_new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_new__title {
+  color: #0c4b0a;
+  font-size: 4rem;
+}
+
+.btn__add__holder {
+  margin: 5rem 0;
+}
+
+.btn__add_new {
+  background-color: #2dcc28;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+  border-radius: 0.9em;
+  border: none;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
 
 /*---- Styling Form ----*/
 .form {
@@ -124,27 +159,24 @@ body {
   cursor: pointer;
 }
 
-
-.btn__add_new {
-  background-color: #2dcc28;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 0.5em 1.5em;
-  border-radius: 0.9em;
-  border: none;
-  color: white;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
 .form__submit:hover,
 .form__submit:focus {
   background-color: #06a700;
 }
 
 /*---- Styling History ----*/
+.recent__posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .entry {
   margin-top: 3em;
+  background-color: khaki;
+  width: 90%;
+  max-width: 40rem;
 }
 
 .entry__header {
@@ -163,9 +195,7 @@ body {
 
 /*---- Styling Footer ----*/
 .footer {
-  grid-column: 1/4;
-  grid-row: 3/4;
-  align-self: stretch;
+  width: 100%;
   justify-self: stretch;
   background-color: #323f43;
   padding: 4em 0;

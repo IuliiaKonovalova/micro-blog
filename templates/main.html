@@ -3,9 +3,11 @@
 
 <section class="add_new">
   <h1 class="add_new__title">Add new section</h1>
-  <a href="{{ url_for('add_post') }}" class="btn__add_new">Add</a>
+  <div class="btn__add__holder">
+    <a href="{{ url_for('add_post') }}" class="btn__add_new">Add</a>
+  </div>
 </section>
-<section>
+<section class="recent__posts">
   <h2>Recent posts</h2>
   {% for entry in entries %}
   <article class="entry">
