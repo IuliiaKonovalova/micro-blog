@@ -174,9 +174,11 @@ body {
 
 .entry {
   margin-top: 3em;
-  background-color: khaki;
+  background-color: rgba(198, 238, 133, 0.541);
+  border-radius: 1em;
   width: 90%;
   max-width: 40rem;
+  padding: 2em 1.5em;
 }
 
 .entry__header {
