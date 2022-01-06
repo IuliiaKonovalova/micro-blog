@@ -124,6 +124,19 @@ body {
   cursor: pointer;
 }
 
+
+.btn__add_new {
+  background-color: #2dcc28;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+  border-radius: 0.9em;
+  border: none;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
 .form__submit:hover,
 .form__submit:focus {
   background-color: #06a700;

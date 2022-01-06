@@ -33,11 +33,11 @@ def main():
 
 @app.route("/add_post", methods=["GET", "POST"])
 def add_post():
-    # if request.method == "POST":
-    #     entry_content = request.form.get("content")
-    #     formatted_date = datetime.datetime.today().strftime("%Y-%m-%d")
-    #     mongo.db.entries.insert_one({"content": entry_content, "data": formatted_date})
-    #     return redirect(url_for('main'))
+    if request.method == "POST":
+        entry_content = request.form.get("content")
+        formatted_date = datetime.datetime.today().strftime("%Y-%m-%d")
+        mongo.db.entries.insert_one({"content": entry_content, "data": formatted_date})
+        return redirect(url_for('main'))
     return render_template("home.html")
 
 
