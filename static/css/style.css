@@ -124,6 +124,13 @@ body {
 
 
 /*---- Styling Form ----*/
+.new__entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -131,20 +138,25 @@ body {
 }
 
 .form__input {
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
 }
 
 .form__label {
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 5em;
 }
 
 .form__textarea {
   width: inherit;
   font-size: 1.6rem;
   padding: 0.7em;
-  margin-bottom: 1em;
+  margin-bottom: 10em;
   resize: vertical;
+  height: 20rem;
 }
 
 .form__submit {
@@ -170,6 +182,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #144b11;
 }
 
 .entry {
@@ -183,12 +196,14 @@ body {
 
 .entry__header {
   margin-bottom: 1.5em;
+
 }
 
 .entry__title {
   display: inline;
   font-size: 1.2rem;
   margin-right: 2em;
+  color: #105f0d;
 }
 
 .entry__date {
